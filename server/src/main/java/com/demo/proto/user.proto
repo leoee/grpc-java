@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package user;
+
+option java_package = "com.demo.proto.generated.user";
+option java_multiple_files = true;
+
+message User {
+    string id = 1;
+    string name = 2;
+    string email = 3;
+}
+
+message CreateUserRequest {
+    User user = 1;
+}
+
+message CreateUserResponse {
+    User user = 1;
+}
+
+service UserService {
+    rpc CreateUser(CreateUserRequest) returns (CreateUserResponse) {};
+}
