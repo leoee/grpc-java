@@ -1,10 +1,10 @@
-package com.demo.server.grpcserver;
+package com.demo;
 
 import io.grpc.Server;
 import io.grpc.ServerBuilder;
 import java.io.IOException;
 
-import com.demo.server.grpcserver.service.UserServiceImpl;
+import com.demo.service.UserServiceImpl;
 
 public class GrpcServerApplication {
 

@@ -1,4 +1,4 @@
-package com.demo.server.grpcserver.service;
+package com.demo.service;
 
 import com.demo.proto.generated.user.CreateUserRequest;
 import com.demo.proto.generated.user.CreateUserResponse;
@@ -42,6 +42,7 @@ public class UserServiceImpl extends UserServiceImplBase {
                                               .setUser(userResponse)
                                               .build();
 
+    System.out.println("Created user");
     responseObserver.onNext(createUserResponse);
     responseObserver.onCompleted();
   }
